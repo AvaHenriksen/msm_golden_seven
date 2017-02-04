@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+</head>
+
+<body>
+<% d = Director.find(params[:id]) %>
+<h1><%= d.name %></h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>DOB</th>
+    <th>Image</th>
+  </tr>
+  <tr>
+    <td><%= d.name %></td>
+    <td><%= d.bio%></td>
+    <td><%= d.dob %></td>
+    <td><img src ="<%= d.image_url %>"></td>
+  </tr>
+</table>
+
+</body>
+</html>
