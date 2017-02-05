@@ -1,0 +1,26 @@
+<h1>Edit a Movie</h1>
+<%   d = Movie.find(params[:id]) %>
+<form action="http://localhost:3000/update_movie/<%=params[:id]%>">
+  <div>
+    <label for="title">Title:</label>
+    <input id="title" type="string" name="title" value ="<%=d.title%>">
+  </div>
+  <div>
+    <label for="year">Year:</label>
+    <input id="year" type="integer" name="year" value = "<%=d.year%>">
+  </div>
+  <div>
+    <label for="duration">Duration:</label>
+    <input id="duration" type="integer" name="duration" value = "<%=d.duration%>">
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input id="description" type="text" name="description" value = "<%=d.description%>">
+  </div>
+  <div>
+    <label for="image_url">Image URL:</label>
+    <input id="image_url" type="string" name="image_url" value = "<%=d.image_url%>">
+  </div>
+    <button>Update Movie</button>
+  </div>
+</form>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+</head>
+
+<body>
+<% d = Movie.find(params[:id]) %>
+<h1><%= d.title %></h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th>Image</th>
+  </tr>
+  <tr>
+    <td><%= d.title %></td>
+    <td><%= d.year%></td>
+    <td><%= d.duration %></td>
+    <td><%= d.description %></td>
+    <td><img src ="<%= d.image_url %>"></td>
+  </tr>
+</table>
+<a href="/movies">Back</a>
+<a href="/delete_movie/<%=d.id%>">Delete</a>
+<a href="/movies/<%=d.id%>/edit">Edit</a>
+
+</body>
+</html>
