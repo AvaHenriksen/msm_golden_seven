@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<% d = Director.find(params[:id]) %>
+<% d = Actor.find(params[:id]) %>
 <h1><%= d.name %></h1>
 
 <table>
@@ -22,9 +22,9 @@
     <td><img src ="<%= d.image_url %>"></td>
   </tr>
 </table>
-<a href="/directors">Back</a>
-<a href="/delete_director/<%=d.id%>">Delete</a>
-<a href="/directors/<%=d.id%>/edit">Edit</a>
+<a href="/actors">Back</a>
+<a href="/delete_actor/<%=d.id%>">Delete</a>
+<a href="/actors/<%=d.id%>/edit">Edit</a>
 
 </body>
 </html>

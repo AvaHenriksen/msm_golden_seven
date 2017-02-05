@@ -51,6 +51,6 @@ class DirectorsController < ApplicationController
 
     d.save
     redirect_to("http://localhost:3000/directors/#{params[:id]}")
-end
+  end
 
 end
